@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Jaro:opsz@6..72&family=Jersey+15&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    
+}
+
+:root {
+    --main-bg: #04160f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-bg);
+    overflow-x: hidden;
+    
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    position: relative;
+}
+
+.head_img {
+    width: 100%;
+    height: 100%;
+    background: url("./gallery_assets/erika-fletcher-GJwgw_XqooQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 20%;
+    filter: brightness(0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: linear-gradient(transparent 5%, var(--main-bg));
+}
+
+.head_cont {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.head_cont a {
+    text-decoration: none;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease 0.4s;
+
+}
+
+.arrow:hover {
+    background-color: white;
+}
+
+.arrow:hover i {
+    color: var(--main-bg)
+}
+
+.arrow i {
+    font-size: 1.2rem;
+    color: white;
+    transition: all ease 0.4s;
+}
+.head_txt{
+    padding: 0px 20px;
+    font-size: 1.4rem;
+    color: white;
+    
+}
+.head_txt h1{
+    font-weight: 200;
+    position: relative;
+    margin-bottom: 10px;
+}
+.head_txt h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    width: 0%;
+    animation: underlineGrow 1s ease forwards;
+    
+    
+}
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+
+.transparency_cont{
+    width: 100vw;
+    height: max-content;
+    color: white;
+    padding: 10px 60px;
+   
+}
+.transparency_cont h2{
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+.transparency_cont h3{
+ font-weight: 400;
+
+}
+ul li{
+    margin-bottom: 20px;
+}
+.transparency_cont p{
+    font-weight: 300;
+}
+ul li h3{
+    display: inline-block;
+}
+
+.overview ul{
+    padding: 20px;
+}
+
+.g_overview ul{
+        padding: 20px;
+}
+
+.legal ul{
+           padding: 20px;
+}
+
+.footer{
+    width: 100vw;
+    height: 70vh;
+      background: url("../transparency/trans_assets/layered-waves-haikei.svg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width : 850px) {
+    .head_txt h1{
+        font-size: 2.1rem;
+    }
+}
+@media screen and (max-width : 650px) {
+    .head_txt h1{
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width : 550px) {
+    .head_txt h1{
+        font-size: 1.7rem;
+        line-height: 30px;
+    }
+    .head_txt h1::before{
+        bottom: -7px;
+    }
+}
